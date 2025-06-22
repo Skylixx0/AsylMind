@@ -7,7 +7,7 @@ import Footer from "@/components/landing/Footer"
 
 const page = () => {
   return (
-    <div className="bg-black/50">
+    <div className="bg-white">
       <Header />
       <div>
         <Hero />

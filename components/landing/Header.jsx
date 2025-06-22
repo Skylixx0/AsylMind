@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 const Header = ({
   aboutRef,
@@ -17,9 +18,11 @@ const Header = ({
       ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
+    
+  const [isAnimating, setIsAnimating] = useState(false);
 
   return (
-    <header className="sticky top-0 backdrop-blur-sm bg-gray-50/50 z-20">
+    <header className="sticky top-0 backdrop-blur-sm bg-gray-50/70 z-20">
       <div className="flex justify-center items-center py-3 bg-black text-white text-sm gap-3">
         <p className="text-white/60 hidden md:block">
           Explore your finance today with FinMind.
@@ -44,9 +47,9 @@ const Header = ({
               objectFit="cover"
               className="rounded-full  shadow-lg"
             /> */}
-            <span className="cursor-default text-xl text-white">FinMind</span>
+            <span className="cursor-default text-lg text-black">FinMind</span>
           </div>
-          <nav className="flex flex-col md:flex-row md:justify-center gap-3 md:gap-8 text-black/60 items-center">
+          <nav className="flex flex-col md:flex-row md:justify-center gap-3 md:gap-8 text-black/80 items-center">
             <div className="flex gap-6">
               <button
                 onClick={() => scrollToSection(aboutRef)}
@@ -74,10 +77,11 @@ const Header = ({
               </button>
             </div>
 
-            <div className="flex gap-4 justify-center">
-              <Link href="/chat-app">
-                <button className="px-4 py-2 bg-black/80 text-white rounded-lg shadow-lg hover:bg-green-900 transition font-semibold cursor-pointer">
-                  Get Started
+            <div className="">
+              <Link href="/">
+                <button onMouseOver={()=>setIsAnimating(true)} onMouseOut={()=>setIsAnimating(false)} className={`${isAnimating && "shadow-2xl"} relative items-center overflow-hidden px-4 py-2 bg-black/80 text-white rounded-lg font-semibold cursor-pointer`}>
+                    <span className={`absolute inset-0 bg-emerald-700 scale-x-0 origin-center ${isAnimating && 'transform scale-x-125 transition-transform duration-500 '}`}></span>
+                    <span className="relative z-10">Get Started</span>
                 </button>
               </Link>
             </div>
