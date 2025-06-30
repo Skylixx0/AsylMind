@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export const Hero = () => {
   const heroRef = useRef(null);
@@ -11,25 +12,25 @@ export const Hero = () => {
       ref={heroRef}
       className="container mx-auto px-6 flex items-center h-screen"
     >
-      <div className="flex flex-col md:flex-row items-center justify-between gap-2 md:gap-10 w-full">
+      <div className="flex flex-col md:flex-row items-center justify-center mb-40 gap-2 md:gap-10 w-full">
         <div className="md:w-1/2 space-y-6 text-center md:text-left">
-          <h1 className="font-bold text-4xl md:text-6xl tracking-tight bg-gradient-to-b from-black/100 to-black/100 text-transparent bg-clip-text pb-2">
-            Master your money with confidence
+          <h1 className="font-bold text-4xl text-center md:text-6xl tracking-tight bg-gradient-to-b from-black/100 to-black/100 text-transparent bg-clip-text pb-2">
+            Управляйте своими {" "}
+                  <span className="seamless-gradient-text">
+                    деньгами
+                  </span>
+                      {" "}
+                      с уверенностью
           </h1>
-          <p className="text-lg md:text-xl text-black leading-relaxed">
-            FinMind helps you set goals, save smarter, and understand your money — even if you're just getting started.
+          <p className="text-lg text-center md:text-xl text-black leading-relaxed">
+            FinMind поможет вам ставить цели, экономить разумнее и понимать свои финансы — даже если вы только начинаете.
           </p>
-          <div className="flex gap-4 mt-6 justify-center md:justify-start">
-            <Link passHref href="/chat-app">
-              <button className="px-6 py-3 bg-green-800 text-white rounded-lg shadow-lg hover:bg-green-900 transition font-semibold cursor-pointer">
-                Get Started
-              </button>
-            </Link>
-            <Link passHref href="/">
-              <button className="px-6 py-3 text-green-900 border-2 border-green-700 hover:border-transparent rounded-lg hover:bg-green-900 hover:text-white transition font-semibold cursor-pointer">
-                Learn More
-              </button>
-            </Link>
+          <div className="flex gap-4 mt-6 justify-center">
+            <Link href="/">
+                <button className= {`hover:border-transparent relative items-center overflow-hidden px-5.5 py-2.5 bg-black/80 hover:bg-black/100 transition text-lg text-white rounded-xl font-semibold cursor-pointer`}>
+                    Начать
+                </button>
+              </Link>
           </div>
         </div>
 
