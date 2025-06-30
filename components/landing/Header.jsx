@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Header = ({
   aboutRef,
@@ -19,16 +19,18 @@ const Header = ({
       ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
-
-  const handleChangeLanguage = (lang) => {
-    i18n.changeLanguage(lang);
-  }
     
   const [isAnimating, setIsAnimating] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
+  
+  useEffect(() => {
+    // Wait until component mounts on client side
+    setMounted(true);
+  }, []);
 
   return (
-    <header className="sticky top-0 backdrop-blur-sm z-20">
+    <header className={`sticky top-0 backdrop-blur-sm z-20 ${mounted ? 'slide-down' : ''}`}>
       <div className="flex justify-center items-center py-1.5 bg-black text-white text-sm gap-3">
         <p className="text-white/60 hidden md:block">
           Исследуй свои финансы сегодня с FinMind.

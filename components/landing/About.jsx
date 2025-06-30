@@ -8,7 +8,7 @@ const About = () => {
       <div className="container text-center">
         <div className="max-w-[540px] mx-auto space-y-8">
           <h2 className="text-4xl text-gray-900  md:text-6xl md:leading-[60px] font-bold tracking-tighter bg-clip-text mt-5">
-            Что такое <span className="text-emerald-600">FinMind</span>
+            <span className="whitespace-nowrap">Что такое <span className="text-emerald-600">FinMind</span></span> 
           </h2>
           <div className="text-gray-600 max-w-2xl mx-auto text-lg md:text-xl flex flex-col gap-4">
             <p>

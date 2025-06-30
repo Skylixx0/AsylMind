@@ -7,7 +7,7 @@ import Feature from "@/components/landing/Feature"
 import Pricing from "@/components/landing/Pricing"
 import Footer from "@/components/landing/Footer"
 import { useRef } from "react"
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 const Home = () => {
   const aboutRef = useRef(null);
