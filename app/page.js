@@ -1,12 +1,12 @@
 "use client"
 
-import Header from "@/components/landing/Header"
-import Hero from "@/components/landing/Hero"
-import About from "@/components/landing/About"
-import Feature from "@/components/landing/Feature"
-import Pricing from "@/components/landing/Pricing"
-import Footer from "@/components/landing/Footer"
-import { useRef } from "react"
+import Header from "@/components/landing/Header";
+import Hero from "@/components/landing/Hero";
+import About from "@/components/landing/About";
+import Feature from "@/components/landing/Feature";
+import Pricing from "@/components/landing/Pricing";
+import Footer from "@/components/landing/Footer";
+import { useRef } from "react";
 import { useRouter } from "next/navigation";
 
 const Home = () => {
