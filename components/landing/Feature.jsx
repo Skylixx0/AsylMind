@@ -1,4 +1,12 @@
+import { useEffect, useState } from "react";
+
 const Feature = () => {
+    const [mounted, setMounted] = useState(false);
+  
+    useEffect(()=>{
+      setMounted(true);
+    }, []);
+
   const features = [
     {
       icon: "/search.svg",
@@ -27,8 +35,8 @@ const Feature = () => {
   ];
 
   return (
-    <div className="py-40 md:py-auto px-6 bg-emerald-200/70 min-h-screen">
-      <div className="container mx-auto">
+    <div className={`py-40 md:py-auto px-6 bg-emerald-200/70 min-h-screen`}>
+      <div className={`container mx-auto ${mounted ? "fade-in-start" : ""}`}>
         <div className="text-center pt-8">
           <span className="bg-neutral-900 text-white rounded-full text-xl px-7 py-3 uppercase">
             Функции

@@ -1,11 +1,18 @@
 "use client";
 
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 const About = () => {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(()=>{
+    setMounted(true);
+  }, []);
+
   return (
     <div className="bg-gradient-to-b from-[#FFFFFF] to-emerald-300 py-40 md:py-auto  px-6 overflow-x-clip flex justify-center items-center min-h-screen">
-      <div className="container text-center">
+      <div className={`container text-center ${mounted ? "fade-in-start" : ""}`}>
         <div className="max-w-[540px] mx-auto space-y-8">
           <h2 className="text-4xl text-gray-900  md:text-6xl md:leading-[60px] font-bold tracking-tighter bg-clip-text mt-5">
             <span className="whitespace-nowrap">Что такое <span className="text-emerald-600">FinMind</span></span> 

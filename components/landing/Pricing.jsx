@@ -2,6 +2,7 @@
 
 import { twMerge } from "tailwind-merge";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 const featureTiers = [
   {
@@ -37,9 +38,16 @@ const featureTiers = [
 ];
 
 const Pricing = () => {
+
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(()=>{
+    setMounted(true);
+  }, []);
+
   return (
-    <div className="pt-45 pb-15 md:pt-auto px-6 bg-white flex items-center justify-center min-h-screen bg-gradient-to-b from-emerald-200/70 to-white">
-      <div className="container text-center">
+    <div className="pt-45 pb-30 md:pt-auto px-6 bg-white flex items-center justify-center min-h-screen bg-gradient-to-b from-emerald-200/70 to-white">
+      <div className={`container text-center ${mounted ? "fade-in-start" : ""}`}>
         <div className="section-heading space-y-8">
           <h1 className="text-4xl md:text-6xl font-extrabold text-gray-900">Наши цены</h1>
           <p className="text-gray-600 mt-4 max-w-2xl mx-auto text-lg md:text-xl">

@@ -5,6 +5,12 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 export const Hero = () => {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(()=>{
+    setMounted(true);
+  }, []);
+
   const heroRef = useRef(null);
   return (
     <div
@@ -12,7 +18,7 @@ export const Hero = () => {
       className="container mx-auto px-6 flex items-center h-screen"
     >
       <div className={`flex flex-col md:flex-row items-center justify-center mb-40 gap-2 md:gap-10 w-full`}>
-        <div className="md:w-1/1 space-y-6 flex flex-col text-center md:text-center">
+        <div className={`md:w-1/1 space-y-6 flex flex-col text-center md:text-center ${mounted ? "fade-in-start" : ""}`}>
           <h1 className="font-bold text-4xl text-center md:text-6xl tracking-tight bg-gradient-to-b from-black/100 to-black/100 text-transparent bg-clip-text pb-2">
               <div>Управляйте своими</div>
               <div className="">

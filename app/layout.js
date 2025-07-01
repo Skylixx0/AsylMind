@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
   const [mounted, setMounted] = useState(false);
 
   useEffect(()=>{
-    setMounted(true);
+    setMounted(false);
   }, []);
 
   return (
