@@ -18,7 +18,7 @@ const Home = () => {
   const { locale } = useRouter();
 
   return (
-    <div className="bg-white">
+    <div className="bg-white ">
       <Header 
         aboutRef={aboutRef}
         pricingRef={pricingRef}

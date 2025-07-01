@@ -33,15 +33,15 @@ const Header = ({
     <header className={`sticky top-0 backdrop-blur-sm z-20 ${mounted ? 'slide-down' : ''}`}>
       <div className="flex justify-center items-center py-1.5 bg-black text-white text-sm gap-3">
         <p className="text-white/60 hidden md:block">
-          Исследуй свои финансы сегодня с FinMind.
+          Исследуй свои финансы сегодня с FinQadam.
         </p>
         <div className="inline-flex gap-1 items-center">
           <p>Начни свой путь сбережений.</p>
         </div>
       </div>
 
-      <div className="container py-3 mx-auto my-auto">
-        <div className="flex items-center justify-around gap-6 md:justify-between sticky top-0 px-3 md:mx-60 lg:px-0">
+      <div className="container py-4 mx-auto">
+        <div className="flex items-center justify-around gap-6 md:justify-around px-3 lg:px-0">
           <div
             onClick={() => scrollToSection(heroRef)}
             className="flex flex-col md:flex-row items-center gap-2 font-extrabold text-1xl"
@@ -55,25 +55,25 @@ const Header = ({
               objectFit="cover"
               className="rounded-full  shadow-lg"
             /> */}
-            <span className="cursor-default text-xl text-black">FinMind</span>
+            <span className="cursor-default text-xl text-black">FinQadam</span>
           </div>
           <nav className="flex flex-col md:flex-row md:justify-center gap-3 md:gap-8 text-black/80 items-center">
             <div className="flex gap-3 md:gap-6">
               <button
                 onClick={() => scrollToSection(aboutRef)}
-                className="cursor-pointer hover:text-black text-lg"
+                className="font-semibold cursor-pointer hover:text-black text-lg"
               >
                 О нас
               </button>
               <button
                 onClick={() => scrollToSection(featureRef)}
-                className="cursor-pointer hover:text-black text-lg"
+                className="font-semibold cursor-pointer hover:text-black text-lg"
               >
                 Функции
               </button>
               <button
                 onClick={() => scrollToSection(pricingRef)}
-                className="cursor-pointer hover:text-black text-lg"
+                className="font-semibold cursor-pointer hover:text-black text-lg"
               >
                 Цена
               </button>
