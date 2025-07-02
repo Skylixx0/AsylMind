@@ -36,7 +36,7 @@ const Home = () => {
       <div ref={featureRef}>
         <Feature />
       </div>
-      <div ref={pricingRef}>
+      <div id="pricing" ref={pricingRef}>
         <Pricing />
       </div>
       <Footer />

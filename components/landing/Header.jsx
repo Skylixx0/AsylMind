@@ -24,8 +24,21 @@ const Header = ({
   const [isAnimating, setIsAnimating] = useState(false);
   const [mount, setMount] = useState(false);
 
-  useEffect(()=>{
+  const [scrolledToPricing, setScrolledToPricing] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const pricing = document.getElementById("pricing");
+      const pricingTop = pricing?.getBoundingClientRect().top ?? 9999;
+
+      // Optional: Only apply on mobile
+      const isMobile = window.innerWidth < 768;
+
+      setScrolledToPricing(isMobile && pricingTop <= 100); // adjust offset as needed
+    };
     setMount(true);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
@@ -53,33 +66,33 @@ const Header = ({
                 objectFit="cover"
                 className="rounded-full  shadow-lg"
               /> */}
-              <span className="cursor-default text-xl text-black">FinQadam</span>
+              <span className={`cursor-default text-xl transition-colors ${scrolledToPricing ? "text-emerald-700" : "text-black"}`}>FinQadam</span>
             </div>
             <nav className="flex flex-col md:flex-row md:justify-center gap-3 md:gap-8 text-black/80 items-center">
               <div className="flex gap-3 md:gap-6">
                 <button
                   onClick={() => scrollToSection(aboutRef)}
-                  className="font-semibold cursor-pointer hover:text-black text-lg"
+                  className={`${scrolledToPricing ? "text-emerald-700" : "text-black"} font-semibold cursor-pointer hover:text-black text-lg`}
                 >
                   О нас
                 </button>
                 <button
                   onClick={() => scrollToSection(featureRef)}
-                  className="font-semibold cursor-pointer hover:text-black text-lg"
+                  className={`${scrolledToPricing ? "text-emerald-700" : "text-black"} font-semibold cursor-pointer hover:text-black text-lg`}
                 >
                   Функции
                 </button>
                 <button
                   onClick={() => scrollToSection(pricingRef)}
-                  className="font-semibold cursor-pointer hover:text-black text-lg"
+                  className={`${scrolledToPricing ? "text-emerald-700" : "text-black"} font-semibold cursor-pointer hover:text-black text-lg`}
                 >
                   Цена
                 </button>
               </div>
 
               <div className="">
-                <Link href="/">
-                  <button onMouseOver={()=>setIsAnimating(true)} onMouseOut={()=>setIsAnimating(false)} className={`${isAnimating ? "shadow-2xl" : "shadow-none"} hover:border-transparent relative items-center overflow-hidden px-3.5 py-1.5 bg-black/80 text-white rounded-xl font-semibold cursor-pointer`}>
+                <Link href="">
+                  <button onMouseOver={()=>setIsAnimating(true)} onMouseOut={()=>setIsAnimating(false)} className={`${isAnimating ? "shadow-2xl" : "shadow-none"} ${scrolledToPricing ? "bg-emerald-700" : "text-black"} hover:border-transparent relative items-center overflow-hidden px-3.5 py-1.5 bg-black/80 text-white rounded-xl font-semibold cursor-pointer`}>
                       <span className={`absolute inset-0 bg-emerald-700 scale-0 origin-center rounded-full transition-transform duration-400 transform ${isAnimating ? 'scale-110 ' : "scale-0"}`}></span>
                       <span className="relative z-10 text-lg">Начать</span>
                   </button>
