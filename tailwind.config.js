@@ -1,14 +1,21 @@
+// tailwind.config.js
 module.exports = {
-  content: ["./app/**/*.{js,jsx,ts,tsx}", "./components/**/*.{js,jsx}"],
+  content: [
+    './app/**/*.{js,jsx,ts,tsx}',
+    './components/**/*.{js,jsx,ts,tsx}',
+  ],
   theme: {
     extend: {
-      fontFamily: {
-        geist: ['var(--font-geist-sans)'],
-        geistmono: ['var(--font-geist-mono)'],
-      }
+      keyframes: {
+        shadowPulse: {
+          '0%, 100%': { transform: 'scaleX(1)', opacity: '0.5' },
+          '50%': { transform: 'scaleX(1.4)', opacity: '0.3' },
+        },
+      },
+      animation: {
+        shadowPulse: 'shadowPulse 2s ease-in-out infinite',
+      },
     },
   },
-  plugins: [
-    require('tailwindcss-animate'),
-  ],
+  plugins: [],
 }

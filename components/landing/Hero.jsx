@@ -23,7 +23,7 @@ export const Hero = () => {
       ref={heroRef}
       className="container mx-auto px-6 flex items-center h-screen"
     >
-      <div className={` flex mx-auto flex-col md:flex-row items-center px-3 md:justify-evenly mb-40 gap-2 lg:px-0`}>
+      <div className={` flex mx-auto flex-col md:flex-row items-center px-3 md:justify-evenly mb-40 gap-3 lg:gap-0 lg:px-0`}>
         <div className={`md:w-1/2 space-y-6 text-center md:text-left ${mounted ? "fade-in-start" : ""}`}>
           <FadeInSection>
             <h1 className="font-bold text-4xl text-center md:text-left md:text-6xl tracking-tight bg-gradient-to-b from-black/100 to-black/100 text-emerald-600 bg-clip-text pb-2">
@@ -52,18 +52,24 @@ export const Hero = () => {
         </div>
         <FadeInSection>
           <div className="flex justify-center">
-            {
-              mounted && (
-                <Image
-                  src="/crypto.png"
-                  alt="crypto"
-                  width={imageSize}
-                  height={imageSize}
-                  objectFit="cover"
-                  className="fade-in-start"
-                />
-              )
-            }
+            <div className="relative flex items-center justify-center">
+              {/* Shadow */}
+              {
+                mounted && (
+                  <>
+                  <div className="absolute bottom-0 w-30 h-3 md:w-50 bg-black/60 rounded-full blur-md animate-shadowPulse z-0" />
+                  <Image
+                    src="/crypto.png"
+                    alt="crypto"
+                    width={imageSize}
+                    height={imageSize}
+                    objectFit="cover"
+                    className="rounded-full mb-7 float-animation"
+                  />
+                  </>
+                )
+              }
+            </div>
           </div>
         </FadeInSection>
       </div>
