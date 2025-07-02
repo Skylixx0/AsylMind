@@ -27,18 +27,18 @@ const Home = () => {
         heroRef={heroRef}
         locale={locale}
         />
-      <div ref={heroRef}>
+      <section ref={heroRef}>
         <Hero />
-      </div>
-      <div ref={aboutRef}>
+      </section>
+      <section ref={aboutRef}>
         <About />
-      </div>
-      <div ref={featureRef}>
+      </section>
+      <section ref={featureRef}>
         <Feature />
-      </div>
-      <div id="pricing" ref={pricingRef}>
+      </section>
+      <section ref={pricingRef}>
         <Pricing />
-      </div>
+      </section>
       <Footer />
     </div>
   )

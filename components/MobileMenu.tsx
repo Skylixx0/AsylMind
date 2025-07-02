@@ -22,8 +22,9 @@ interface MobileMenuProps {
   pricingRef: React.RefObject<HTMLElement>;
 }
 
-const MobileMenu: FC<MobileMenuProps> = ({ isMenuOpen, setIsMenuOpen, scrollToSection, aboutRef, featureRef, pricingRef }) => {
+const MobileMenu: FC<MobileMenuProps> = ({ isMenuOpen, scrollToSection, setIsMenuOpen, aboutRef, featureRef, pricingRef }) => {
     const [isOpen, setIsOpen] = useState<Boolean>(false);
+
     return (
     <Drawer open={isMenuOpen} onOpenChange={setIsMenuOpen}>
       <DrawerTrigger asChild>
@@ -37,19 +38,11 @@ const MobileMenu: FC<MobileMenuProps> = ({ isMenuOpen, setIsMenuOpen, scrollToSe
       </DrawerTrigger>
 
       <DrawerContent className="text-black border-t border-white/20">
-        {/* ✅ This fixes the accessibility warning */}
         <div className="mx-auto w-full max-w-5xl">
             <div className="mb-3">
                 <DrawerHeader>
                     <DrawerTitle className="flex justify-center font-bold items-center px-4 text-lg">
                         Меню
-                        {/* <Button
-                        variant="ghost"
-                        size="icon"
-                        onClick={() => setIsOpen(false)}
-                        >
-                        <X className="h-6 w-6" />
-                        </Button> */}
                     </DrawerTitle>
                 </DrawerHeader>
             </div>
@@ -58,15 +51,19 @@ const MobileMenu: FC<MobileMenuProps> = ({ isMenuOpen, setIsMenuOpen, scrollToSe
             <div className="flex flex-col gap-4">
                 <DrawerClose asChild>
                     <Button
-                        onClick={() => scrollToSection(aboutRef)}
-                        className={`font-semibold p-2 border-black cursor-pointer  text-lg`}
-                    >   
+                        onClick={()=> {
+                            setTimeout(()=>scrollToSection(aboutRef), 100);
+                        }}
+                        className={`font-semibold p-2 border-black cursor-pointer text-lg`}
+                    >
                         О нас
                     </Button>
                 </DrawerClose>
                 <DrawerClose asChild>
                     <Button
-                        onClick={() => scrollToSection(featureRef)}
+                        onClick={() => {
+                            setTimeout(()=>scrollToSection(featureRef), 100);
+                        }}
                         className={`font-semibold cursor-pointer  text-lg`}
                     >
                         Функции
@@ -74,7 +71,9 @@ const MobileMenu: FC<MobileMenuProps> = ({ isMenuOpen, setIsMenuOpen, scrollToSe
                 </DrawerClose>
                 <DrawerClose asChild>
                     <Button
-                        onClick={() => scrollToSection(pricingRef)}
+                        onClick={() => {
+                            setTimeout(()=>scrollToSection(pricingRef), 100);
+                        }}
                         className={`font-semibold cursor-pointer text-lg`}
                     >
                         Цена
@@ -83,7 +82,7 @@ const MobileMenu: FC<MobileMenuProps> = ({ isMenuOpen, setIsMenuOpen, scrollToSe
             </div>
             <div className="flex flex-col mb-3">
                 <DrawerClose asChild>
-                    <Button className={` items-center overflow-hidden px-3.5 py-1.5 text-white font-semibold cursor-pointer text-lg`}>
+                    <Button className={` items-center px-3.5 py-1.5 text-white font-semibold cursor-pointer text-lg`}>
                         Начать
                     </Button>
                 </DrawerClose>

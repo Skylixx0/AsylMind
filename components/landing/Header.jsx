@@ -19,7 +19,7 @@ const Header = ({
 
   const scrollToSection = (ref) => {
     if (ref?.current) {
-      ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
+      ref.current.scrollIntoView({ behavior: "smooth"});
     }
   };
     
@@ -40,8 +40,7 @@ const Header = ({
       setScrolledToPricing(isMobile && pricingTop <= 100); // adjust offset as needed
     };
     setMount(true);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+
   }, []);
 
   return (
@@ -74,8 +73,8 @@ const Header = ({
             <nav className="flex flex-col md:flex-row md:justify-center gap-3 md:gap-8 text-black/80 items-center">
               
               <MobileMenu 
+                scrollToSection={scrollToSection}
                 isMenuOpen={isMenuOpen} 
-                scrollToSection={scrollToSection} 
                 aboutRef={aboutRef} 
                 featureRef={featureRef}
                 pricingRef={pricingRef}
