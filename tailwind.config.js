@@ -6,6 +6,7 @@ module.exports = {
   ],
   theme: {
     extend: {
+      scrollBehavior: ["responsive"],
       keyframes: {
         slideUp: {
           '0%': { transform: 'translateY(100%)' },

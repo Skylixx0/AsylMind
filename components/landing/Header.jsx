@@ -19,7 +19,7 @@ const Header = ({
 
   const scrollToSection = (ref) => {
     if (ref?.current) {
-      ref.current.scrollIntoView({ behavior: "smooth"});
+      ref.current.scrollIntoView({ behavior: "smooth", block: "start"});
     }
   };
     
