@@ -5,27 +5,38 @@ const Feature = () => {
   const features = [
     {
       icon: "/search.svg",
-      text: "Умное управление бюджетом",
-      description:
-        "Автоматически отслеживайте свои доходы и расходы, создавайте категории трат и получайте рекомендации по улучшению финансовых привычек.",
+      text: "ИИ ассистент",
+      description: "AI Money Coach - персональный помощник по деньгам прямо в приложении." ,
     },
     {
       icon: "/search.svg",
-      text: "Финансовые цели и мотивация",
+      text: "Голосовой ввод",
       description:
-        "Устанавливайте цели — например, «накопить на отпуск» или «погасить долг» — и AsylMind подскажет, как быстрее достичь их с учетом вашего бюджета.",
+        "Скажи: “Я потратил 2500 на такси” — и всё запишется автоматически.",
     },
     {
       icon: "/search.svg",
-      text: "Аналитика и отчеты",
+      text: "Автоматическая генерация бюджета",
       description:
-        "Получайте еженедельные и ежемесячные отчеты о своих расходах, с графиками, метками и анализом, что помогает понять, куда уходят деньги.",
+        "На основе твоих трат AsylMind сам создаёт тебе план.",
     },
     {
       icon: "/search.svg",
-      text: "Обучение финансам на простом языке",
+      text: "Мини-уроки, гайды, курсы",
       description:
         "Краткие курсы, советы и тесты, чтобы понять, как работает кредит, сбережения, инвестиции — без сложной терминологии.",
+    },
+    {
+      icon: "/search.svg",
+      text: "Семейный учет",
+      description:
+        "Общий бюджет — добавляй членов семьи и отслеживай траты вместе.",
+    },
+    {
+      icon: "/search.svg",
+      text: "Кастомизация интерфейса",
+      description:
+        "Персонализация — настрой приложение под себя: виджеты, цвета, шрифты.",
     },
   ];
 
@@ -34,36 +45,34 @@ const Feature = () => {
       <div className={`container max-w-6xl mx-auto`}>
         <FadeInSection>
           <div className="text-center pt-8">
-            <span className="bg-neutral-900 text-white rounded-full text-xl px-7 py-3 uppercase">
-              Функции
-            </span>
-            <h2 className="text-3xl sm:text-5xl  text-emerald-600 lg:text-6xl mt-12 tracking-wide font-bold">
+            <h2 className="text-3xl sm:text-5xl  text-emerald-600 lg:text-6xl mt-7 tracking-wide font-bold">
               Специально <span className="text-gray-900">для вас</span>
             </h2>
           </div>
         </FadeInSection>
-        <FadeInSection>
+        
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 mt-16 max-w-5xl mx-auto">
             {features.map((feature, index) => (
-              <div
-                key={index}
-                className="flex items-start bg-emerald-600/40 p-6 rounded-xl hover:-translate-y-4 hover:shadow-2xl hover:shadow-emerald-300 ease-out duration-700"
-              >
-                <div className="flex-shrink-0 h-12 w-12 flex items-center justify-center  text-black rounded-full">
-                  <img src={feature.icon} alt="icon" className="h-6 w-6" />
+              <FadeInSection key={index}>
+                <div
+                  key={index}
+                  className="flex h-full items-start bg-emerald-600/40 p-6 rounded-xl hover:-translate-y-4 hover:shadow-2xl hover:shadow-emerald-300 ease-out duration-600"
+                >
+                  <div className="flex-shrink-0 h-12 w-12 flex items-center justify-center  text-black rounded-full">
+                    <img src={feature.icon} alt="icon" className="h-6 w-6" />
+                  </div>
+                  <div className="ml-4">
+                    <h5 className="text-xl font-semibold text-gray-900">
+                      {feature.text}
+                    </h5>
+                    <p className="text-md text-neutral-800 mt-2">
+                      {feature.description}
+                    </p>
+                  </div>
                 </div>
-                <div className="ml-4">
-                  <h5 className="text-xl font-semibold text-gray-900">
-                    {feature.text}
-                  </h5>
-                  <p className="text-md text-neutral-800 mt-2">
-                    {feature.description}
-                  </p>
-                </div>
-              </div>
+              </FadeInSection>
             ))}
           </div>
-        </FadeInSection>
       </div>
     </div>
   );

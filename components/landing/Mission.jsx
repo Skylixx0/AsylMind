@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { FadeInSection } from "@/components/utils/FadeInSection"
 import { GlassCard } from "@/components/utils/GlassCard"
 
-const About = () => {
+const Mission = () => {
   const faqData = [
     {
       index: 1,
@@ -58,4 +58,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Mission;

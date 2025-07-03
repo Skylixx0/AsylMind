@@ -85,7 +85,7 @@ const Header = ({
                   onClick={() => scrollToSection(aboutRef)}
                   className={`${scrolledToPricing ? "text-emerald-700" : "text-black"} font-semibold cursor-pointer hover:text-black text-lg`}
                 >
-                  О нас
+                  Миссия
                 </button>
                 <button
                   onClick={() => scrollToSection(featureRef)}

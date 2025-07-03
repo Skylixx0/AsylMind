@@ -2,7 +2,7 @@
 
 import Header from "@/components/landing/Header";
 import Hero from "@/components/landing/Hero";
-import About from "@/components/landing/About";
+import About from "@/components/landing/Mission";
 import Feature from "@/components/landing/Feature";
 import Pricing from "@/components/landing/Pricing";
 import Footer from "@/components/landing/Footer";

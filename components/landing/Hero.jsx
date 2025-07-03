@@ -21,7 +21,7 @@ export const Hero = () => {
   return (
     <div
       ref={heroRef}
-      className="container mx-auto px-6 flexp pt-30 items-center h-screen"
+      className="container mx-auto px-6 flex pt-30 md:pt-0 items-center h-screen"
     >
       <div className={` flex mx-auto flex-col md:flex-row items-center px-3 md:justify-evenly mb-40 gap-3 lg:gap-0 lg:px-0`}>
         <div className={`md:w-1/2 space-y-6 text-center md:text-left ${mounted ? "fade-in-start" : ""}`}>
