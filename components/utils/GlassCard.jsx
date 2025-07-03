@@ -24,7 +24,7 @@ export const GlassCard = ({ index, question, answer }) => {
         setIsDesktop(false);
         setIsOpen(false); // close on unhover
       }}
-    className=" sm:w-[100%] max-w-lg relative group bg-white/50 border border-white/90 rounded-xl  overflow-hidden backdrop-blur-md shadow-md hover:shadow-2xl transition-all mx-auto duration-500 w-full h-45 md:h-55 lg:h-60">
+    className=" sm:w-3/4 max-w-lg relative group bg-white/50 border border-white/90 rounded-xl  overflow-hidden backdrop-blur-md shadow-md hover:shadow-2xl transition-all mx-auto duration-500 w-full h-45 md:h-55 lg:h-50">
     {/* Front: Question */}
     <div className={`${activeIndex === index ? "opacity-0" : "opacity-100"} absolute inset-0 flex items-center justify-center px-4 text-center text-2xl font-semibold text-black z-10 transition-all duration-500 group-hover:opacity-0`}>
       {question}
