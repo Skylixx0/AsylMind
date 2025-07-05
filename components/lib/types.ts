@@ -5,4 +5,6 @@ export interface MobileMenuProps {
   aboutRef: React.RefObject<HTMLElement>;
   featureRef: React.RefObject<HTMLElement>;
   pricingRef: React.RefObject<HTMLElement>;
+  missionRef: React.RefObject<HTMLElement>;
+  integrationRef: React.RefObject<HTMLElement>;
 }
