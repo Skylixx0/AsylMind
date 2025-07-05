@@ -2,36 +2,42 @@
 
 import Header from "@/components/landing/Header";
 import Hero from "@/components/landing/Hero";
-import About from "@/components/landing/Mission";
 import Feature from "@/components/landing/Feature";
 import Pricing from "@/components/landing/Pricing";
 import Footer from "@/components/landing/Footer";
+import Integration from "@/components/landing/Integration"
 import { useRef } from "react";
 import { useRouter } from "next/navigation";
+import Mission from "@/components/landing/Mission";
 
 const Home = () => {
-  const aboutRef = useRef(null);
+  const missionRef = useRef(null);
   const pricingRef = useRef(null);
   const featureRef = useRef(null);
   const workRef = useRef(null);
   const heroRef = useRef(null);
+  const integrationRef = useRef(null);
   const { locale } = useRouter();
 
   return (
     <div className="bg-white ">
       <Header 
-        aboutRef={aboutRef}
+        missionRef={missionRef}
         pricingRef={pricingRef}
         featureRef={featureRef}
         workRef={workRef}
         heroRef={heroRef}
+        integrationRef={integrationRef}
         locale={locale}
         />
       <section ref={heroRef}>
         <Hero />
       </section>
-      <section ref={aboutRef}>
-        <About />
+      <section ref={missionRef}>
+        <Mission />
+      </section>
+      <section ref={integrationRef}>
+        <Integration />
       </section>
       <section ref={featureRef}>
         <Feature />

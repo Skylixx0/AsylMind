@@ -7,14 +7,11 @@ import { FadeInSection } from "@/components/utils/FadeInSection";
 import MobileMenu from "@/components/MobileMenu"
 
 const Header = ({
-  aboutRef,
+  missionRef,
   pricingRef,
   featureRef,
-  workRef,
+  integrationRef,
   heroRef,
-  userState,
-  isLoading,
-  locale
 }) => {
 
   const scrollToSection = (ref) => {
@@ -30,17 +27,7 @@ const Header = ({
   const [scrolledToPricing, setScrolledToPricing] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const pricing = document.getElementById("pricing");
-      const pricingTop = pricing?.getBoundingClientRect().top ?? 9999;
-
-      // Optional: Only apply on mobile
-      const isMobile = window.innerWidth < 768;
-
-      setScrolledToPricing(isMobile && pricingTop <= 100); // adjust offset as needed
-    };
     setMount(true);
-
   }, []);
 
   return (
@@ -54,7 +41,7 @@ const Header = ({
           </div>
         </div>
         <div className="container py-4 mx-auto">
-          <div className="flex items-center mx-8 md:mx-0 justify-between gap-6 md:justify-around px-3 lg:px-0">
+          <div className="flex items-center mx-8 md:mx-0 justify-between md:gap-0 gap-6 md:justify-around px-3 lg:px-0">
             <div
               onClick={() => scrollToSection(heroRef)}
               className="flex flex-col md:flex-row items-center gap-2 font-extrabold text-1xl"
@@ -75,17 +62,24 @@ const Header = ({
               <MobileMenu 
                 scrollToSection={scrollToSection}
                 isMenuOpen={isMenuOpen} 
-                aboutRef={aboutRef} 
+                missionRef={missionRef} 
                 featureRef={featureRef}
                 pricingRef={pricingRef}
+                integrationRef={integrationRef}
                 setIsMenuOpen={setIsMenuOpen} />
 
               <div className="hidden md:flex gap-3 md:gap-6">
                 <button
-                  onClick={() => scrollToSection(aboutRef)}
+                  onClick={() => scrollToSection(missionRef)}
                   className={`${scrolledToPricing ? "text-emerald-700" : "text-black"} font-semibold cursor-pointer hover:text-black text-lg`}
                 >
                   Миссия
+                </button>
+                <button
+                  onClick={() => scrollToSection(integrationRef)}
+                  className={`${scrolledToPricing ? "text-emerald-700" : "text-black"} font-semibold cursor-pointer hover:text-black text-lg`}
+                >
+                  Интеграция
                 </button>
                 <button
                   onClick={() => scrollToSection(featureRef)}

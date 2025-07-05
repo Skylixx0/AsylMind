@@ -17,10 +17,8 @@ export const Hero = () => {
   
   const imageSize = width <= 768 ? 200 : 350;
   
-  const heroRef = useRef(null);
   return (
     <div
-      ref={heroRef}
       className="container mx-auto px-6 flex pt-30 md:pt-0 items-center h-screen"
     >
       <div className={` flex mx-auto flex-col md:flex-row items-center px-3 md:justify-evenly mb-40 gap-3 lg:gap-0 lg:px-0`}>
