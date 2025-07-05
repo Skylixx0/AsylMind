@@ -31,6 +31,14 @@ const Mission = () => {
     <div className="bg-gradient-to-b from-[#FFFFFF] to-emerald-300 py-40 md:py-auto mx-auto overflow-x-clip flex justify-center items-center min-h-screen">
       <div className={`container text-center my-auto px-3`}>
         <FadeInSection>
+          <div className="text-center mb-16 space-y-8">
+            <h1 className="text-4xl md:text-6xl font-extrabold text-gray-900">Наша миссия</h1>
+            <p className="text-neutral-800  mt-4 max-w-2xl mx-auto text-lg md:text-xl">
+              AsylMind помогает понять, куда уходят деньги, как начать откладывать, и делает финансы простыми и понятными.
+            </p>
+          </div>
+        </FadeInSection>
+        <FadeInSection>
           <div className="px-4 flex flex-col mx-auto xl:mx-50 items-center justify-center gap-8">
             <div className="grid grid-cols-1 md:grid-cols-2 md:gap-0 gap-8 w-full">
               <GlassCard {...faqData[0]} />
