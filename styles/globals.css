@@ -37,10 +37,6 @@
   }
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 @layer utilities {
   .slide-down {
     animation: slideDownFade 1.2s ease-out both;
