@@ -58,7 +58,7 @@ const MobileMenu: FC<MobileMenuProps> = ({ isMenuOpen, scrollToSection, setIsMen
                             }}
                             className={`font-semibold p-2 border-black cursor-pointer text-lg`}
                         >
-                            Интеграция
+                            Прогресс
                         </Button>
                     </DrawerClose>
                     <DrawerClose asChild>

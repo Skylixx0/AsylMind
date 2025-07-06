@@ -79,7 +79,7 @@ const Header = ({
                   onClick={() => scrollToSection(integrationRef)}
                   className={`${scrolledToPricing ? "text-emerald-700" : "text-black"} font-semibold cursor-pointer hover:text-black text-lg`}
                 >
-                  Интеграция
+                  Прогресс
                 </button>
                 <button
                   onClick={() => scrollToSection(featureRef)}
