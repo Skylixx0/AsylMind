@@ -62,7 +62,7 @@ const Feature = () => {
                   className={`${feature?.future ? "bg-gray-600/40 hover:shadow-gray-300" : "bg-emerald-600/40 hover:shadow-emerald-300"} relative flex h-full items-start p-6 rounded-xl hover:-translate-y-4 hover:shadow-2xl  ease-out duration-600`}
                   >
                   {feature?.future && (
-                    <div className="absolute top-2 left-[-14px] rotate-[-45deg] bg-red-500 text-white px-2 py-0.5 text-sm font-bold shadow-sm">
+                    <div className="absolute top-2 left-[-14px] rotate-[-45deg] bg-gray-500 text-white px-2 py-0.5 text-sm font-bold shadow-sm">
                       Скоро...
                     </div>
                   )}
