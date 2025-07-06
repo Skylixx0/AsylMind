@@ -15,7 +15,7 @@ export const GlassCard = ({ index, question, answer }) => {
     <FadeInSection>
       <div
         key={question}
-        className="flex flex-col mx-auto items-center h-full text-center p-8 bg-white rounded-2xl shadow-sm hover:-translate-y-4 hover:shadow-2xl ease-out duration-700"
+        className="flex flex-col mx-auto items-center h-full text-center p-8 bg-white rounded-2xl shadow-sm"
       >
         <h2 className={`text-2xl font-semibold text-gray-800`}>
           {question}

@@ -39,8 +39,8 @@ const Mission = () => {
           </div>
         </FadeInSection>
         <FadeInSection>
-          <div className="px-4 flex flex-col mx-auto items-center w-full md:w-1/2 justify-center gap-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="px-4 flex flex-col mx-auto items-center w-full md:w-3/4 justify-center gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:mx-25 gap-10">
               <GlassCard {...faqData[0]} />
               <GlassCard {...faqData[1]} />
             </div>  

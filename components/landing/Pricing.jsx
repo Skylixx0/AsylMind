@@ -23,7 +23,7 @@ const featureTiers = [
   {
     title: "Pro тариф",
     monthlyPrice: 890,
-    buttonText: "Регестрация",
+    buttonText: "Регистрация",
     popular: true,
     inverse: true,
     features: [
