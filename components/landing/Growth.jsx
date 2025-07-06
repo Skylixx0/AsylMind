@@ -16,12 +16,12 @@ const Integration = () => {
             extend: false,
             image: "/bank.png",
             title: "Финансовая база",
-            text: "Финансовый прогресс в FinMind — это не просто цифры. Продвигайся от новичка до финансово свободного, выполняя простые действия: веди бюджет, проходи мини-уроки, достигай целей"
+            text: "Финансовый прогресс в AsylMind — это не просто цифры. Продвигайся от новичка до финансово свободного, выполняя простые действия: веди бюджет, проходи мини-уроки, достигай целей"
         },
         {
             image: "/recommendation.png",
             extend: false,
-            title: "Привычка без давления",
+            title: "Привычка",
             text: "Система streaks🔥: AsylMind поможет быстро превратить ежедневное занятие в привычку и достичь результата."
         },
     ];
@@ -42,7 +42,7 @@ const Integration = () => {
           <FadeInSection key={idx}>
             <div
               key={data.title}
-              className="flex flex-col items-center h-full text-center p-8 bg-white rounded-2xl shadow-sm hover:-translate-y-4 hover:shadow-2xl ease-out duration-700"
+              className="flex w-full flex-col items-center h-full text-center p-8 bg-white rounded-2xl shadow-sm hover:-translate-y-4 hover:shadow-2xl ease-out duration-700"
             >
               <div className="w-20 h-20 mb-6 flex items-center justify-center bg-gray-200 rounded-full p-4">
                 <img src={data.image} alt={data.title} className="w-12 h-12" />

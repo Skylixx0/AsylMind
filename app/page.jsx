@@ -5,7 +5,7 @@ import Hero from "@/components/landing/Hero";
 import Feature from "@/components/landing/Feature";
 import Pricing from "@/components/landing/Pricing";
 import Footer from "@/components/landing/Footer";
-import Integration from "@/components/landing/Integration"
+import Growth from "@/components/landing/Growth"
 import { useRef } from "react";
 import { useRouter } from "next/navigation";
 import Mission from "@/components/landing/Mission";
@@ -16,7 +16,7 @@ const Home = () => {
   const featureRef = useRef(null);
   const workRef = useRef(null);
   const heroRef = useRef(null);
-  const integrationRef = useRef(null);
+  const growthRef = useRef(null);
   const { locale } = useRouter();
 
   return (
@@ -27,7 +27,7 @@ const Home = () => {
         featureRef={featureRef}
         workRef={workRef}
         heroRef={heroRef}
-        integrationRef={integrationRef}
+        growthRef={growthRef}
         locale={locale}
         />
       <section ref={heroRef}>
@@ -36,8 +36,8 @@ const Home = () => {
       <section ref={missionRef}>
         <Mission />
       </section>
-      <section ref={integrationRef}>
-        <Integration />
+      <section ref={growthRef}>
+        <Growth />
       </section>
       <section ref={featureRef}>
         <Feature />

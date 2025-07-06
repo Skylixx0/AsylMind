@@ -10,7 +10,7 @@ const Header = ({
   missionRef,
   pricingRef,
   featureRef,
-  integrationRef,
+  growthRef,
   heroRef,
 }) => {
 
@@ -65,7 +65,7 @@ const Header = ({
                 missionRef={missionRef} 
                 featureRef={featureRef}
                 pricingRef={pricingRef}
-                integrationRef={integrationRef}
+                growthRef={growthRef}
                 setIsMenuOpen={setIsMenuOpen} />
 
               <div className="hidden md:flex gap-3 md:gap-6">
@@ -76,7 +76,7 @@ const Header = ({
                   Миссия
                 </button>
                 <button
-                  onClick={() => scrollToSection(integrationRef)}
+                  onClick={() => scrollToSection(growthRef)}
                   className={`${scrolledToPricing ? "text-emerald-700" : "text-black"} font-semibold cursor-pointer hover:text-black text-lg`}
                 >
                   Прогресс

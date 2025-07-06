@@ -47,7 +47,7 @@ const Pricing = () => {
           <div className="section-heading space-y-8">
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900">Наши цены</h1>
             <p className="text-gray-600 mt-4 max-w-2xl mx-auto text-lg md:text-xl">
-              Откройте для себя возможности FinMind с поддержкой ИИ, которые помогут вам эффективно управлять своими финансами и достигать финансовых целей.
+              Откройте для себя возможности AsylMind с поддержкой ИИ, которые помогут вам эффективно управлять своими финансами и достигать финансовых целей.
             </p>
           </div>
         </FadeInSection>

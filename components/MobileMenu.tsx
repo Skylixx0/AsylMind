@@ -14,7 +14,7 @@ import { Menu, X } from "lucide-react"
 import { FC, useState } from "react"
 import { MobileMenuProps } from "./lib/types"
 
-const MobileMenu: FC<MobileMenuProps> = ({ isMenuOpen, scrollToSection, setIsMenuOpen, missionRef, integrationRef, featureRef, pricingRef }) => {
+const MobileMenu: FC<MobileMenuProps> = ({ isMenuOpen, scrollToSection, setIsMenuOpen, missionRef, growthRef, featureRef, pricingRef }) => {
     const [isOpen, setIsOpen] = useState<Boolean>(false);
 
     return (
@@ -54,7 +54,7 @@ const MobileMenu: FC<MobileMenuProps> = ({ isMenuOpen, scrollToSection, setIsMen
                     <DrawerClose asChild>
                         <Button
                             onClick={()=> {
-                                setTimeout(()=>scrollToSection(integrationRef), 100);
+                                setTimeout(()=>scrollToSection(growthRef), 100);
                             }}
                             className={`font-semibold p-2 border-black cursor-pointer text-lg`}
                         >
