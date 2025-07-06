@@ -118,7 +118,7 @@ export default function TermsPrivacyModals() {
             <DialogTitle className='font-bold text-xl'>Условия использования</DialogTitle>
           </DialogHeader>
           <div className="text-sm space-y-4">
-            <p>Настоящий документ "Пользовательское соглашение" является предложением ТОО "AsylMind" заключить соглашение на нижеприведённых условиях.</p>
+            <p>Настоящий документ &quot;Пользовательское соглашение&quot; является предложением ТОО &quot;AsylMind&quot; заключить соглашение на нижеприведённых условиях.</p>
             <p>Последнее обновление: 5 июля 2025 г.</p>
             {termsOfUse.map((data, index)=>(
                 <div key={index} className='space-y-2'>
