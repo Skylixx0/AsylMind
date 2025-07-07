@@ -1,7 +1,12 @@
+"use client";
+
 import Image from "next/image";
 import TermsPrivacyModals from "../TermsPrivacyModals";
 import LanguageSelector from "../language-selector";
 import { FadeInSection } from "../utils/FadeInSection";
+
+// import dynamic from "next/dynamic";
+// const LanguageSelector = dynamic(() => import("../language-selector"), { ssr: false });
 
 const Footer = () => {
   return (

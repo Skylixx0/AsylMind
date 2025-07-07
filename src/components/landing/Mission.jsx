@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { FadeInSection } from "@/components/utils/FadeInSection"
-import { GlassCard } from "@/components/utils/GlassCard"
+import { FadeInSection } from "@/src/components/utils/FadeInSection"
+import { GlassCard } from "@/src/components/utils/GlassCard"
 
 const Mission = () => {
   const faqData = [

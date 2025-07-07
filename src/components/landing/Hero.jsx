@@ -4,8 +4,8 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { useWindowWidth } from "@/components/utils/useWindowWidth";
-import { FadeInSection } from "@/components/utils/FadeInSection";
+import { useWindowWidth } from "@/src/components/utils/useWindowWidth";
+import { FadeInSection } from "@/src/components/utils/FadeInSection";
 
 export const Hero = () => {
   const [mounted, setMounted] = useState(false);

@@ -2,9 +2,8 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import MobileMenu from "@/components/MobileMenu"
+import MobileMenu from "@/src/components/MobileMenu"
 import { useTranslation } from "react-i18next";
-import LanguageSelector from "@/components/language-selector";
 
 const Header = ({
   missionRef,

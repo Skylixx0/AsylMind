@@ -8,8 +8,8 @@ import {
   DrawerClose,
   DrawerHeader,
   DrawerTitle
-} from "@/components/ui/drawer"
-import { Button } from "@/components/ui/button"
+} from "@/src/components/ui/drawer"
+import { Button } from "@/src/components/ui/button"
 import { Menu, X } from "lucide-react"
 import { FC, useState } from "react"
 import { MobileMenuProps } from "./lib/types"

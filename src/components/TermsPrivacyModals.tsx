@@ -2,7 +2,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Button } from '@/components/ui/button'
+import { Button } from '@/src/components/ui/button'
 import {
   Dialog,
   DialogContent,
@@ -10,7 +10,7 @@ import {
   DialogTitle,
   DialogTrigger,
   DialogClose,
-} from '@/components/ui/dialog'
+} from '@/src/components/ui/dialog'
 
 export default function TermsPrivacyModals() {
   const [openModal, setOpenModal] = useState<'terms' | 'privacy' | null>(null)

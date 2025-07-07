@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { FadeInSection } from "@/components/utils/FadeInSection";
+import { FadeInSection } from "@/src/components/utils/FadeInSection";
 
 const Feature = () => {
   const features = [

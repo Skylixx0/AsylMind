@@ -1,15 +1,15 @@
 "use client"
-export const dynamic = "force-dynamic";
+// export const dynamic = "force-dynamic";
 
-import Header from "@/components/landing/Header";
-import Hero from "@/components/landing/Hero";
-import Feature from "@/components/landing/Feature";
-import Pricing from "@/components/landing/Pricing";
-import Footer from "@/components/landing/Footer";
-import Growth from "@/components/landing/Growth"
-import { useRef } from "react";
+import Header from "@/src/components/landing/Header";
+import Hero from "@/src/components/landing/Hero";
+import Feature from "@/src/components/landing/Feature";
+import Pricing from "@/src/components/landing/Pricing";
+import Footer from "@/src/components/landing/Footer";
+import Growth from "@/src/components/landing/Growth"
+import React, { useRef } from "react";
 import { useRouter } from "next/navigation";
-import Mission from "@/components/landing/Mission";
+import Mission from "@/src/components/landing/Mission";
 
 const Home = () => {
   const missionRef = useRef(null);
@@ -18,7 +18,6 @@ const Home = () => {
   const workRef = useRef(null);
   const heroRef = useRef(null);
   const growthRef = useRef(null);
-  const { locale } = useRouter();
 
   return (
     <div className="bg-white ">
@@ -29,7 +28,6 @@ const Home = () => {
         workRef={workRef}
         heroRef={heroRef}
         growthRef={growthRef}
-        locale={locale}
         />
       <section ref={heroRef}>
         <Hero />
