@@ -1,7 +1,8 @@
 "use client"
 
-import {useState, useEffect} from "react";
+import React, {useState, useEffect} from "react";
 import { Geist, Geist_Mono } from "next/font/google";
+import "@/components/lib/i18n";
 import "@/styles/globals.css";
 
 const geistSans = Geist({
@@ -26,7 +27,9 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased ${mounted ? "fade-in-start" : ""}`}
       >
-        {children}
+        <React.Suspense fallback="loading...">
+          {children}
+        </React.Suspense>
       </body>
     </html>
   );

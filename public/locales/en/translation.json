@@ -1,0 +1,15 @@
+{
+    "greeting": "Hello, welcome to AsylMind!",
+    "header": {
+        "header1": "Explore your finances today with AsylMind.",
+        "header2": "Start your savings journey."
+    },
+    "navbar": {
+        "mission": "Mission",
+        "progress": "Progress",
+        "feature": "Features",
+        "price": "Price",
+        "get_started": "Get Started",
+        "menu": "Menu"
+    }
+}

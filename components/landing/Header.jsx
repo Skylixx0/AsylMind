@@ -1,10 +1,10 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { FadeInSection } from "@/components/utils/FadeInSection";
 import MobileMenu from "@/components/MobileMenu"
+import { useTranslation } from "react-i18next";
+import LanguageSelector from "@/components/language-selector";
 
 const Header = ({
   missionRef,
@@ -25,20 +25,27 @@ const Header = ({
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const [scrolledToPricing, setScrolledToPricing] = useState(false);
-
+  const [isClient, setIsClient] = useState(false);
+  const { t } = useTranslation();  
+  const {header1, header2} = t("header");
+  const {mission, progress, feature, price, get_started, menu } = t("navbar");
+  
   useEffect(() => {
     setMount(true);
+    setIsClient(true);
   }, []);
-
+  
   return (
     <header className={`sticky top-0 backdrop-blur-sm z-20 ${mount ? "slide-down" : ""}`}>
         <div className="flex justify-center items-center py-1.5 bg-black text-white text-sm gap-3">
-          <p className="text-white/60 hidden md:block">
-            Исследуй свои финансы сегодня с AsylMind.
-          </p>
-          <div className="inline-flex gap-1 items-center">
-            <p>Начни свой путь сбережений.</p>
-          </div>
+          {isClient && (
+              <>
+                <p className="text-white/60 hidden md:block">{header1}</p> 
+                <div className="inline-flex gap-1 items-center">
+                  <p>{header2}</p>
+                </div>
+              </>
+          )}
         </div>
         <div className="container py-4 mx-auto">
           <div className="flex items-center mx-8 md:mx-0 justify-between md:gap-0 gap-6 md:justify-around px-3 lg:px-0">
@@ -55,10 +62,10 @@ const Header = ({
                 objectFit="cover"
                 className="rounded-full  shadow-lg"
               /> */}
+
               <span className={`cursor-default text-xl transition-colors ${scrolledToPricing ? "text-emerald-700" : "text-black"}`}>AsylMind</span>
             </div>
             <nav className="flex flex-col md:flex-row md:justify-center gap-3 md:gap-8 text-black/80 items-center">
-              
               <MobileMenu 
                 scrollToSection={scrollToSection}
                 isMenuOpen={isMenuOpen} 
@@ -66,41 +73,53 @@ const Header = ({
                 featureRef={featureRef}
                 pricingRef={pricingRef}
                 growthRef={growthRef}
-                setIsMenuOpen={setIsMenuOpen} />
+                setIsMenuOpen={setIsMenuOpen}
+                t={t("navbar")}
+              />
 
               <div className="hidden md:flex gap-3 md:gap-6">
-                <button
-                  onClick={() => scrollToSection(missionRef)}
-                  className={`${scrolledToPricing ? "text-emerald-700" : "text-black"} font-semibold cursor-pointer hover:text-black text-lg`}
-                >
-                  Миссия
-                </button>
-                <button
-                  onClick={() => scrollToSection(growthRef)}
-                  className={`${scrolledToPricing ? "text-emerald-700" : "text-black"} font-semibold cursor-pointer hover:text-black text-lg`}
-                >
-                  Прогресс
-                </button>
-                <button
-                  onClick={() => scrollToSection(featureRef)}
-                  className={`${scrolledToPricing ? "text-emerald-700" : "text-black"} font-semibold cursor-pointer hover:text-black text-lg`}
-                >
-                  Функции
-                </button>
-                <button
-                  onClick={() => scrollToSection(pricingRef)}
-                  className={`${scrolledToPricing ? "text-emerald-700" : "text-black"} font-semibold cursor-pointer hover:text-black text-lg`}
-                >
-                  Цена
-                </button>
+                {
+                  isClient && (
+                    <>
+                    <button
+                      onClick={() => scrollToSection(missionRef)}
+                      className={`${scrolledToPricing ? "text-emerald-700" : "text-black"} font-semibold cursor-pointer hover:text-black text-lg`}
+                    >
+                      {mission}
+                    </button>
+                    <button
+                      onClick={() => scrollToSection(growthRef)}
+                      className={`${scrolledToPricing ? "text-emerald-700" : "text-black"} font-semibold cursor-pointer hover:text-black text-lg`}
+                    >
+                      {progress}
+                    </button>
+                    <button
+                      onClick={() => scrollToSection(featureRef)}
+                      className={`${scrolledToPricing ? "text-emerald-700" : "text-black"} font-semibold cursor-pointer hover:text-black text-lg`}
+                    >
+                      {feature}
+                    </button>
+                    <button
+                      onClick={() => scrollToSection(pricingRef)}
+                      className={`${scrolledToPricing ? "text-emerald-700" : "text-black"} font-semibold cursor-pointer hover:text-black text-lg`}
+                    >
+                      {price}
+                    </button>
+                  </>
+                  )
+                }
               </div>
 
               <div className="hidden md:flex">
                 <Link href="">
-                  <button onMouseOver={()=>setIsAnimating(true)} onMouseOut={()=>setIsAnimating(false)} className={`${isAnimating ? "shadow-2xl" : "shadow-none"} ${scrolledToPricing ? "bg-emerald-700" : "text-black"} hover:border-transparent relative items-center overflow-hidden px-3.5 py-1.5 bg-black/80 text-white rounded-xl font-semibold cursor-pointer`}>
-                      <span className={`absolute inset-0 bg-emerald-700 scale-0 origin-center rounded-full transition-transform duration-400 transform ${isAnimating ? 'scale-110 ' : "scale-0"}`}></span>
-                      <span className="relative z-10 text-lg">Начать</span>
-                  </button>
+                {
+                  isClient && (
+                    <button onMouseOver={()=>setIsAnimating(true)} onMouseOut={()=>setIsAnimating(false)} className={`${isAnimating ? "shadow-2xl" : "shadow-none"} ${scrolledToPricing ? "bg-emerald-700" : "text-black"} hover:border-transparent relative items-center overflow-hidden px-3.5 py-1.5 bg-black/80 text-white rounded-xl font-semibold cursor-pointer`}>
+                        <span className={`absolute inset-0 bg-emerald-700 scale-0 origin-center rounded-full transition-transform duration-400 transform ${isAnimating ? 'scale-110 ' : "scale-0"}`}></span>
+                        <span className="relative z-10 text-lg">{get_started}</span>
+                    </button>
+                  )
+                }
                 </Link>
               </div>
             </nav>
