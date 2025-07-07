@@ -1,4 +1,5 @@
 "use client"
+export const dynamic = "force-dynamic";
 
 import Header from "@/components/landing/Header";
 import Hero from "@/components/landing/Hero";
