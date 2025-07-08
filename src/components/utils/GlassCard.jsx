@@ -1,15 +1,7 @@
 import React, { act, useState } from 'react'
-import { useWindowWidth } from './useWindowWidth';
 import { FadeInSection } from './FadeInSection';
 
 export const GlassCard = ({ index, question, answer }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isDesktop, setIsDesktop] = useState(false);
-  const [activeIndex, setActiveIndex] = useState(null);
-
-  const toggleCard = (index) => {
-    setActiveIndex((prev) => (prev === index ? null : index)); // Toggle
-  };
 
   return (
     <FadeInSection>

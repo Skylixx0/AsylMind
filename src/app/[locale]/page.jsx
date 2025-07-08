@@ -1,5 +1,4 @@
 "use client"
-// export const dynamic = "force-dynamic";
 
 import Header from "@/src/components/landing/Header";
 import Hero from "@/src/components/landing/Hero";
@@ -8,7 +7,6 @@ import Pricing from "@/src/components/landing/Pricing";
 import Footer from "@/src/components/landing/Footer";
 import Growth from "@/src/components/landing/Growth"
 import React, { useRef } from "react";
-import { useRouter } from "next/navigation";
 import Mission from "@/src/components/landing/Mission";
 
 const Home = () => {

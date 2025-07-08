@@ -16,7 +16,6 @@ import { MobileMenuProps } from "./lib/types"
 
 const MobileMenu: FC<MobileMenuProps> = ({ isMenuOpen, scrollToSection, setIsMenuOpen, missionRef, growthRef, featureRef, pricingRef, t }) => {
     const [isOpen, setIsOpen] = useState<Boolean>(false);
-    const {mission, progress, feature, price, get_started, menu } = t;
 
     return (
     <Drawer open={isMenuOpen} onOpenChange={setIsMenuOpen}>
@@ -35,7 +34,7 @@ const MobileMenu: FC<MobileMenuProps> = ({ isMenuOpen, scrollToSection, setIsMen
             <div className="mb-3">
                 <DrawerHeader>
                     <DrawerTitle className="flex justify-center font-bold items-center px-4 text-lg">
-                        {menu}
+                        {t("navbar.menu")}
                     </DrawerTitle>
                 </DrawerHeader>
             </div>
@@ -49,7 +48,7 @@ const MobileMenu: FC<MobileMenuProps> = ({ isMenuOpen, scrollToSection, setIsMen
                             }}
                             className={`font-semibold p-2 border-black cursor-pointer text-lg`}
                         >
-                            {mission}
+                            {t("navbar.mission")}
                         </Button>
                     </DrawerClose>
                     <DrawerClose asChild>
@@ -59,7 +58,7 @@ const MobileMenu: FC<MobileMenuProps> = ({ isMenuOpen, scrollToSection, setIsMen
                             }}
                             className={`font-semibold p-2 border-black cursor-pointer text-lg`}
                         >
-                            {progress}
+                            {t("navbar.progress")}
                         </Button>
                     </DrawerClose>
                     <DrawerClose asChild>
@@ -69,7 +68,7 @@ const MobileMenu: FC<MobileMenuProps> = ({ isMenuOpen, scrollToSection, setIsMen
                             }}
                             className={`font-semibold cursor-pointer  text-lg`}
                         >
-                            {feature}
+                            {t("navbar.feature")}
                         </Button>
                     </DrawerClose>
                     <DrawerClose asChild>
@@ -79,14 +78,14 @@ const MobileMenu: FC<MobileMenuProps> = ({ isMenuOpen, scrollToSection, setIsMen
                             }}
                             className={`font-semibold cursor-pointer text-lg`}
                         >
-                            {price}
+                            {t("navbar.price")}
                         </Button>
                     </DrawerClose>
                 </div>
                 <div className="flex flex-col mb-3">
                     <DrawerClose asChild>
                         <Button className={` items-center px-3.5 py-1.5 text-white font-semibold cursor-pointer text-lg`}>
-                            {get_started}
+                            {t("navbar.get_started")}
                         </Button>
                     </DrawerClose>
                 </div>
