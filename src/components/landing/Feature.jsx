@@ -1,47 +1,10 @@
 import { useEffect, useState } from "react";
 import { FadeInSection } from "@/src/components/utils/FadeInSection";
+import { useTranslations } from "next-intl";
 
 const Feature = () => {
-  const features = [
-    {
-      icon: "/search.svg",
-      text: "Финансовый калькулятор",
-      description:
-        "Твой помощник, который покажет твои доходы и расходы, составит для тебя понятную картину бюджета и поможет двигаться к финансовым целям.",
-    },
-    {
-      icon: "/search.svg",
-      text: "Голосовой ввод",
-      description:
-        "Скажи: “Я потратил 2500 на такси” — и всё запишется автоматически.",
-    },
-    {
-      icon: "/search.svg",
-      text: "Кастомизация интерфейса",
-      description:
-        "Персонализация — настрой приложение под себя: виджеты, цвета, шрифты.",
-    },
-    {
-      future: true,
-      icon: "/search.svg",
-      text: "ИИ ассистент",
-      description: "AI Money Coach - персональный помощник по деньгам прямо в приложении." ,
-    },
-    {
-      future: true,
-      icon: "/search.svg",
-      text: "Лента знаний",
-      description:
-        "Следи за новостями из мира финансов, экономических советами и обновлениями от AsylMind — всё в одном месте.",
-    },
-    {
-      future: true,
-      icon: "/search.svg",
-      text: "Семейный учет",
-      description:
-        "Общий бюджет — добавляй членов семьи и отслеживай траты вместе.",
-    },
-  ];
+  const t = useTranslations("Home.feature");
+  const cards = t.raw('cards');
 
   return (
     <div className={`py-30 md:py-auto px-6 bg-emerald-200/70 min-h-screen`}>
@@ -49,13 +12,16 @@ const Feature = () => {
         <FadeInSection>
           <div className="text-center pt-8">
             <h2 className="text-3xl sm:text-5xl  text-emerald-600 lg:text-6xl mt-7 tracking-wide font-bold">
-              Специально <span className="text-gray-900">для вас</span>
+              {/* Специально <span className="text-gray-900">для вас</span> */}
+              {t.rich("title", {
+                bold: (chunks) => <span className="text-gray-900">{chunks}</span>
+              })}
             </h2>
           </div>
         </FadeInSection>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 mt-16 max-w-5xl mx-auto">
-          {features.map((feature, index) => (
+          {cards.map((feature, index) => (
             <FadeInSection key={index}>
                 <div
                   key={index}
@@ -63,7 +29,7 @@ const Feature = () => {
                   >
                   {feature?.future && (
                     <div className="absolute top-2 left-[-14px] rotate-[-45deg] bg-gray-500 text-white px-2 py-0.5 text-sm font-bold shadow-sm">
-                      Скоро...
+                      {feature.subtext}
                     </div>
                   )}
                   <div className="flex-shrink-0 h-12 w-12 flex items-center justify-center  text-black rounded-full">

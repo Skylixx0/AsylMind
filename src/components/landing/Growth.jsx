@@ -4,41 +4,25 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { FadeInSection } from "@/src/components/utils/FadeInSection"
 import { GlassCard } from "@/src/components/utils/GlassCard"
+import { useTranslations } from "next-intl";
 
 const Integration = () => {
-    const workInfoData = [
-        {
-            image: "/search.svg",
-            title: "Мини-уроки",
-            text: "Краткие статьи по основам финансов, которые помогают понять, куда уходят деньги и как начать копить. С уроков начинается твой путь к финансовой осознанности.",
-        },
-        {
-            extend: false,
-            image: "/bank.png",
-            title: "Финансовая база",
-            text: "Финансовый прогресс в AsylMind — это не просто цифры. Продвигайся от новичка до финансово свободного, выполняя простые действия: веди бюджет, проходи мини-уроки, достигай целей"
-        },
-        {
-            image: "/recommendation.png",
-            extend: false,
-            title: "Привычка",
-            text: "Система streaks🔥: AsylMind поможет быстро превратить ежедневное занятие в привычку и достичь результата."
-        },
-    ];
+  const t = useTranslations("Home.growth");
+  const cards = t.raw('cards');
 
   return (
     <div className="py-45 md:py-auto px-6 min-h-screen bg-gradient-to-b from-emerald-300 to-emerald-200/70">
       {/* Top Section */}
       <FadeInSection>
         <div className="text-center mb-16 space-y-8">
-          <h1 className="text-4xl md:text-6xl font-extrabold text-gray-900">Финансовый рост</h1>
+          <h1 className="text-4xl md:text-6xl font-extrabold text-gray-900">{t("title")}</h1>
           <p className="text-neutral-800  mt-4 max-w-2xl mx-auto text-lg md:text-xl">
-            Краткие уроки & гайды, личный прогресс и привычки — всё, чтобы ты добился своих целей.
+            {t("subtitle")}
           </p>
         </div>
       </FadeInSection>
       <div className="max-w-6xl mx-auto grid gap-12 md:grid-cols-3">
-        {workInfoData.map((data, idx) => (
+        {cards.map((data, idx) => (
           <FadeInSection key={idx}>
             <div
               key={data.title}

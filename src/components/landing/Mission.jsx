@@ -4,8 +4,11 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { FadeInSection } from "@/src/components/utils/FadeInSection"
 import { GlassCard } from "@/src/components/utils/GlassCard"
+import { useTranslations } from "next-intl";
 
 const Mission = () => {
+  const t = useTranslations("Home.mission");
+  const cards = t.raw('cards');
   const faqData = [
     {
       index: 1,
@@ -32,20 +35,27 @@ const Mission = () => {
       <div className={`container text-center my-auto px-3`}>
         <FadeInSection>
           <div className="text-center mb-16 space-y-8">
-            <h1 className="text-4xl md:text-6xl font-extrabold text-gray-900">Наша миссия</h1>
+            <h1 className="text-4xl md:text-6xl font-extrabold text-gray-900">{t("title")}</h1>
             <p className="text-neutral-800  mt-4 max-w-2xl mx-auto text-lg md:text-xl">
-              AsylMind помогает понять, куда уходят деньги, как начать откладывать, и делает финансы простыми и понятными.
+              {t("subtitle")}
             </p>
           </div>
         </FadeInSection>
         <FadeInSection>
           <div className="px-4 flex flex-col mx-auto items-center w-full md:w-3/4 justify-center gap-8">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:mx-25 gap-10">
-              <GlassCard {...faqData[0]} />
-              <GlassCard {...faqData[1]} />
+                {cards.map((card, idx) => (
+                  (card.index !== 3) && (
+                    <GlassCard key={idx} question={card.question} answer={card.answer} />
+                  )
+                ))}
             </div>  
             <div className="max-w-lg w-full">
-              <GlassCard {...faqData[2]} />
+                {cards.map((card, idx) => (
+                  (card.index === 3) && (
+                    <GlassCard key={idx} question={card.question} answer={card.answer} />
+                  )
+                ))}
             </div>
           </div>
         </FadeInSection>

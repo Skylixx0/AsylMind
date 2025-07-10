@@ -14,6 +14,245 @@
                 "get_started": "Get Started",
                 "menu": "Menu"
             }
+        },
+        "hero": {
+            "title": "Manage. Save. Achieve.",
+            "subtitle": "Track, learn, set goals, and manage your money to gain financial clarity and confidence in your decisions. AsylMind is your path to a mature and free relationship with money."
+        },
+        "mission": {
+            "title": "Our Mission",
+            "subtitle": "AsylMind helps you understand where your money goes, how to start saving, and makes finances simple and understandable.",
+            "cards": [
+                {
+                    "index": 1,
+                    "question": "Don't understand where your money goes?",
+                    "answer": "AsylMind will show everything clearly and simply. You will immediately see what you spend the most on and where you can save so that your money starts working for you."
+                },
+                {
+                    "index": 2,
+                    "question": "Finding it hard to start saving?",
+                    "answer": "We'll help you take the first step. AsylMind will tell you how much you can put aside now and show you how to gradually increase your savings."
+                },
+                {
+                    "index": 3,
+                    "question": "Are you afraid of complex financial terms?",
+                    "answer": "We will explain it in simple and understandable language. We will help you understand finances without unnecessary complexity and make learning easy and fun."
+                }
+            ]
+        },
+        "growth": {
+            "title": "Financial growth",
+            "subtitle": "Short lessons & guides, personal progress and habits - everything to help you achieve your goals.",
+            "cards": [
+                {
+                    "index": 1,
+                    "title": "Mini-lessons",
+                    "text": "Short articles on financial basics that help you understand where your money goes and how to start saving. Lessons are where your path to financial awareness begins.",
+                    "image": "/search.svg"
+                },
+                {
+                    "index": 2,
+                    "extend": false,
+                    "title": "Financial base",
+                    "text": "Financial progress in AsylMind is not just about numbers. Move from beginner to financially free by following simple steps: budget, take mini-lessons, achieve goals",
+                    "image": "/bank.png"
+                },
+                {
+                    "index": 3,
+                    "extend": false,
+                    "title": "Habit",
+                    "text": "Streaks🔥 system: AsylMind will help you quickly turn your daily activity into a habit and achieve results.",
+                    "image": "/recommendation.png"
+                }
+            ]   
+        },
+        "feature": {
+            "title": "<bold>Special</bold> for you",
+            "cards": [
+                {
+                    "index": 1,
+                    "text": "Financial calculator",
+                    "description": "Your assistant, who will show you your income and expenses, will create a clear picture of your budget for you and will help you move towards your financial goals.",
+                    "icon": "/search.svg"
+                },
+                {
+                    "index": 2,
+                    "text": "Voice input",
+                    "description": "Say: “I spent 2500 on a taxi” and everything will be recorded automatically.",
+                    "icon": "/search.svg"
+                },
+                {
+                    "index": 3,
+                    "text": "UI customization",
+                    "description": "Personalization - customize the application for yourself: widgets, colors, fonts.",
+                    "icon": "/search.svg"
+                },
+                {
+                    "future": true,
+                    "icon": "/search.svg",
+                    "text": "AI assistant",
+                    "subtext": "Soon...",
+                    "description": "AI Money Coach - personal money assistant right in the app." 
+                },
+                {
+                    "future": true,
+                    "icon": "/search.svg",
+                    "text": "Feed",
+                    "subtext": "Soon...",
+                    "description": "Stay up to date with financial news, economic advice and updates from AsylMind, all in one place."
+                },
+                {
+                    "future": true,
+                    "icon": "/search.svg",
+                    "text": "Family accounting",
+                    "subtext": "Soon...",
+                    "description": "Shared Budget - Add family members and track spending together."
+                }
+            ] 
+        },
+        "pricing": {
+            "title": "Our prices",
+            "subtitle": "Discover AsylMind's AI-powered capabilities to help you effectively manage your finances and achieve your financial goals.",
+            "cards": [
+                {
+                    "title": "Free",
+                    "monthlyPrice": 0,
+                    "buttonText": "Get started for free",
+                    "popular": false,
+                    "inverse": false,
+                    "month": "month",
+                    "features": [
+                        "Access to the first 5 financial literacy lessons",
+                        "Financial calculator",
+                        "2 active financial goals",
+                        "Reminders, notifications, PDF report export.",
+                        "Financial progress"
+                    ]
+                },
+                {
+                    "title": "Pro",
+                    "monthlyPrice": 890,
+                    "buttonText": "Sign up now",
+                    "popular": "Popular",
+                    "inverse": true,
+                    "month": "month",
+                    "features": [
+                        "Full access to lessons",
+                        "Full access to courses",
+                        "Full access to guides",
+                        "Family accounting",
+                        "UI customization",
+                        "Unlimited financial goals",
+                        "AI - smart financial assistant"
+                    ]
+                }
+            ]
+        },
+        "footer": {
+            "title": "All rights reserved.",
+            "subtext": {
+                "privacy": "Privacy policy",
+                "terms": "Terms of use"
+            }
+        },
+        "modal": {
+            "termsOfUse":{
+                "title": "Terms of use",
+                "description": "This document “User Agreement” of AsylMind LLC is an offer to conclude an agreement on the following terms.",
+                "lastUpdated": "Last updated: July 5, 2025",
+                "terms":[
+                    {
+                        "title": "1. General provisions",
+                        "list": ["The Company offers anyone to use the AsylMind information application for accounting and managing personal finances (hereinafter referred to as the AsylMind application) under the terms and conditions stipulated in this Agreement.", "The AsylMind service is provided free of charge with limited functionality. Access to additional features is possible upon registration of a paid subscription.", "By starting to use the AsylMind application, you are considered to have fully and unconditionally accepted the terms of this agreement.", "Users from the EAEU countries (for example, Kazakhstan) must explicitly agree to the Terms of Use and Privacy Policy before using AsylMind."]
+                    },
+                    {
+                        "title": "2. User Registration and Use of AsylMind",
+                        "list": ["The user can use AsylMind without registration. To access advanced features, you must complete the registration procedure and create a personal account.", "Personal data provided by the user is processed by the Company in accordance with the Privacy Policy. Registration or use of the application means consent to data processing, as well as to the receipt of informational and advertising messages (with the consent of the user).", "During registration, the user specifies an email address and creates a login and password. The Company may limit the use of certain logins and set password requirements (length, characters, etc.).", "The user is fully responsible for the safety of their access data. All actions performed from their account are considered the actions of the user themselves, unless they notify the Company of unauthorized access (see paragraph 2.5).", "If unauthorized access is suspected, the user must immediately notify the Company. It is also recommended to end sessions by safely logging out of the account. The Company is not liable for losses incurred due to violation of these rules.", "The user is prohibited from reproducing, copying, selling or using any elements of the AsylMind application for commercial purposes without the Company's permission.", "The Company has the right to block or delete the user's account, restrict access to functionality, and delete any content without explanation in the event of a violation of the terms of the agreement.", "Users under 16 years of age cannot have an account in AsylMind. If such an account is found, it will be deleted.", "The user can delete their account and refuse to use the application by contacting the support service at: support@asylmind.kz", "The user is liable to third parties for actions committed using AsylMind, including cases of violation of their rights and interests."]
+                    },
+                    {
+                        "title": "3. Access to paid features",
+                        "list": ["To gain access to additional features (hereinafter referred to as the Paid Service), you must subscribe on a weekly, monthly, annual, or perpetual basis. Payment is made in advance.", "The subscription price is indicated in tenge and displayed in the application. The current subscription status is visible in the user's account.", "The user guarantees that he or she has the right to use the selected payment method. The company is not liable for the consequences of using invalid payment information.", "The user must follow the payment instructions and enter the information correctly.", "All fees and charges for the transfer of funds are paid by the user.", "Refunds are not made if the user has violated the terms of the agreement or if access to the service is impossible due to his or her fault.", "Purchase of a paid service means agreement to its terms. The service is considered rendered from the moment of purchase.", "The paid service is provided 'as is' without additional warranties.", "The company undertakes to eliminate technical malfunctions, but does not guarantee their complete absence."]
+                    },
+                    {
+                        "title": "4. Intellectual property",
+                        "list": ["All materials posted in the AsylMind application (design, text, graphics, program code, etc.) are the property of the Company or other copyright holders.", "Use of materials is permitted only for personal non-commercial purposes.", "Copying, distribution, modification and other use is possible only with the written permission of the Company."]
+                    },
+                    {
+                        "title": "5. Disclaimer of Warranties and Limitation of Liability",
+                        "list": ["The application is provided 'as is'. The user uses it at his own risk.", "The Company does not guarantee that the application meets the user's expectations and is not responsible for the results of its use.", "The Company is not responsible for any losses incurred as a result of using the application.", "The Company is not responsible for the correctness of payments and any financial losses that arose beyond its control.", "The Company is not responsible for the inability to provide the service for reasons beyond its control (communication failures, equipment, etc.).", "The Company's maximum liability is limited to the amount paid by the user for paid services.", "The Company is released from liability in the event of force majeure (natural disasters, power outages, strikes, government actions, etc.)."]
+                    },
+                    {
+                        "title": "6. Duration, modification and termination of the agreement",
+                        "list": ["This agreement comes into force upon acceptance of its terms and is valid for 12 months. It is automatically extended for the next 12 months unless either party notifies the other of its refusal.", "The company has the right to make changes to the agreement without prior notice. The new version comes into force upon publication in the application.", "If the user does not agree with the changes, he can stop using AsylMind within 10 days by notifying the company. Otherwise, he is considered to have agreed to the new terms.", "The company has the right to terminate the agreement unilaterally at any time."]
+                    },
+                    {
+                        "title": "7. Other Provisions",
+                        "list": ["This agreement governs the relationship between the user and the Company when using AsylMind.", "All current and future functions of AsylMind are subject to this agreement.", "The Agreement is governed by the laws of the Republic of Kazakhstan. All disputes are resolved in accordance with the laws of the Republic of Kazakhstan.", "The Company's failure to act in the event of a breach of the Agreement by the user does not mean a waiver of its rights in the future."]
+                    }
+                ]
+            },
+            "privacyPolicy": {
+                "title": "Privacy Policy",
+                "lastUpdated": "Last updated: July 5, 2025.",
+                "privacy": [
+                    {
+                        "title": "1. Introduction",
+                        "text": "Welcome to AsylMind — an intelligent financial application! We respect your privacy and are committed to protecting your personal data. This document explains how we collect, use, store, and protect your information. Please read carefully."
+                    },
+                    {
+                        "title": "2. What data we collect",
+                        "text": "We process the following categories of information:",
+                        "list": {
+                            "Personal data": "Name, email address, phone number, and other contact details you provide during registration.",
+                            "Technical data": "IP address, device and browser type, operating system, usage information (e.g., visit time, pages viewed, actions in the app).",
+                            "Financial information": "Data about your income, expenses, goals, investments, and other financial activities you enter in the app."
+                        }
+                    },
+                    {
+                        "title": "3. How we use your information",
+                        "text": "Your data is used for the following purposes:",
+                        "list": {
+                            "Service provision": "Budget creation, savings recommendations, and other app functions.",
+                            "Product improvement": "User behavior analysis, interface and feature optimization.",
+                            "Communication with you": "Notifications about updates, support, helpful tips, and offers (with your consent)."
+                        },
+                        "subtext": "We do not sell your data."
+                    },
+                    {
+                        "title": "4. Data sharing with third parties",
+                        "text": "We do not share your personal data with third parties, except in the following cases:",
+                        "list": {
+                            "Verified services": "Trusted hosting or analytics partners bound by confidentiality agreements.",
+                            "Legal requirements": "When required by law or to protect rights, security, and interests."
+                        }
+                    },
+                    {
+                        "title": "5. Data security",
+                        "text": "We apply standard information protection methods: encryption, access restrictions, secure storage. However, no system guarantees 100% security."
+                    },
+                    {
+                        "title": "6. Your rights",
+                        "text": "You have the right to:",
+                        "list": {
+                            "Access": "Review the data we hold.",
+                            "Correction": "Update or correct inaccurate information.",
+                            "Deletion": "Request deletion of your account and all data."
+                        },
+                        "subtext": "To exercise your rights, please contact us using the provided contacts."
+                    },
+                    {
+                        "title": "7. Policy updates",
+                        "text": "We may make changes to this policy. Updates will be published in the app or on the website. We recommend checking the terms regularly."
+                    },
+                    {
+                        "title": "8. Contact information",
+                        "text": "If you have any questions, please write to us:",
+                        "list": {
+                            "Email": "team.asylmind@gmail.com"
+                        }
+                    }
+                ]
+            }
         }
     },
     "LocalLayout":{

@@ -1,7 +1,7 @@
 import React, { act, useState } from 'react'
 import { FadeInSection } from './FadeInSection';
 
-export const GlassCard = ({ index, question, answer }) => {
+export const GlassCard = ({ question, answer }) => {
 
   return (
     <FadeInSection>

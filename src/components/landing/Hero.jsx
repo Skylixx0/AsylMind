@@ -6,10 +6,12 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { useWindowWidth } from "@/src/components/utils/useWindowWidth";
 import { FadeInSection } from "@/src/components/utils/FadeInSection";
+import { useTranslations } from "next-intl";
 
 export const Hero = () => {
   const [mounted, setMounted] = useState(false);
   const width = useWindowWidth();
+  const t = useTranslations("Home.hero");
 
   useEffect(()=>{
     setMounted(true);
@@ -30,14 +32,12 @@ export const Hero = () => {
                   <span className="seamless-gradient-text">деньгами </span>
                   <span>с уверенностью</span>
                 </div> */}
-                Управляй.
-                Копи.
-                Добивайся.
+                {t("title")}
             </h1>
           </FadeInSection>
           <FadeInSection>
             <p className="max-w-2xl text-lg text-black leading-relaxed">
-              Веди учёт, обучайся, строй цели и управляй деньгами так, чтобы обрести финансовую ясность и уверенность в своих решениях. AsylMind — твой путь к зрелому и свободному отношению к деньгам.
+              {t("subtitle")}
             </p>
           </FadeInSection>
           <div className="flex gap-4 mt-2 justify-center">

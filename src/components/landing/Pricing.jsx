@@ -4,6 +4,7 @@ import { twMerge } from "tailwind-merge";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { FadeInSection } from "@/src/components/utils/FadeInSection";
+import { useTranslations } from "next-intl";
 
 const featureTiers = [
   {
@@ -39,21 +40,23 @@ const featureTiers = [
 ];
 
 const Pricing = () => {
+  const t = useTranslations("Home.pricing");
+  const cards = t.raw('cards');
 
   return (
     <div className="pt-45 pb-30 md:pt-auto px-6 bg-white flex items-center justify-center min-h-screen bg-gradient-to-b from-emerald-200/70 to-white">
       <div className={`container text-center`}>
         <FadeInSection>
           <div className="section-heading space-y-8">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900">Наши цены</h1>
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900">{t("title")}</h1>
             <p className="text-gray-600 mt-4 max-w-2xl mx-auto text-lg md:text-xl">
-              Откройте для себя возможности AsylMind с поддержкой ИИ, которые помогут вам эффективно управлять своими финансами и достигать финансовых целей.
+              {t("subtitle")}
             </p>
           </div>
         </FadeInSection>
         <FadeInSection>
           <div className="flex flex-col gap-6 items-center mt-13 lg:flex-row lg:items-center lg:justify-center text-start">
-            {featureTiers.map(
+            {cards.map(
               ({
                 title,
                 monthlyPrice,
@@ -61,6 +64,7 @@ const Pricing = () => {
                 popular,
                 features,
                 inverse,
+                month,
               }) => (
                 <div
                   key={title}
@@ -92,7 +96,7 @@ const Pricing = () => {
                           }}
                           className=" bg-[linear-gradient(to_right,#DD7DDF,#E1CD86,#BBCB92,#71C2EF,#3BFFFF,#DD7DDF,#E1CD86,#BBCB92,#71C2EF,#3BFFFF)] [background-size:200%] text-transparent bg-clip-text font-medium"
                         >
-                          Популярно
+                          {popular}
                         </motion.span>
                       </div>
                     )}
@@ -113,7 +117,7 @@ const Pricing = () => {
                       )}
                     >
                       {" "}
-                      /месяц
+                      /{month}
                     </span>
                   </div>
                   <button

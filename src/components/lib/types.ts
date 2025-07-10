@@ -18,3 +18,15 @@ export interface MobileMenuProps {
   growthRef: React.RefObject<HTMLElement>;
   t: (key: string, values?: Record<string, any>) => string;
 }
+
+export interface TermsOfUseItem {
+  title: string;
+  list: string[];
+};
+
+export interface PolicySection {
+  title: string;
+  text: string;
+  list?: string[];
+  subtext?: string;
+}
