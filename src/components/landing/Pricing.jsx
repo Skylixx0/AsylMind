@@ -84,7 +84,7 @@ const Pricing = () => {
                     </h3>
                     {popular && (
                       <div className="inline-flex text-sm p-1.5 rounded-xl border border-white/50">
-                        <motion.span
+                        {/* <motion.span
                           animate={{
                             backgroundPositionX: "-100%",
                           }}
@@ -95,9 +95,11 @@ const Pricing = () => {
                             repeatType: "loop",
                           }}
                           className=" bg-[linear-gradient(to_right,#DD7DDF,#E1CD86,#BBCB92,#71C2EF,#3BFFFF,#DD7DDF,#E1CD86,#BBCB92,#71C2EF,#3BFFFF)] [background-size:200%] text-transparent bg-clip-text font-medium"
-                        >
+                        > */}
+                        <span>
                           {popular}
-                        </motion.span>
+                        </span>
+                        {/* </motion.span> */}
                       </div>
                     )}
                   </div>
